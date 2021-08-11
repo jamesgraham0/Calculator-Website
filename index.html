@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Grade Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="gradient">
+            <h1>Grade Calculator</h1>
+            <p id="createdBy">Created by James Graham on August 9, 2021 as a small side project</p>
+            <p id="results">Current Grade: </p>
+                <table>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Grade</th> 
+                    <th>Weight(%)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><input id='input1' type="number"></td>
+                    <td><input id='input2' type="number"></td>
+                </tr>
+            
+                <tr>
+                <td>2</td>
+                <td><input id='input3' type="number"></td>
+                <td><input id='input4' type="number"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input id='input5' type="number"></td>
+                    <td><input id='input6' type="number"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input id='input7' type="number"></td>
+                    <td><input id='input8' type="number"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input id='input9' type="number"></td>
+                    <td><input id='input10' type="number"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><input id='input11' type="number"></td>
+                    <td><input id='input12' type="number"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><input id='input13' type="number"></td>
+                    <td><input id='input14' type="number"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><input id='input15' type="number"></td>
+                    <td><input id='input16' type="number"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><input id='input17' type="number"></td>
+                    <td><input id='input18' type="number"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><input id='input19' type="number"></td>
+                    <td><input id='input20' type="number"></td>
+                </tr>
+        
+            </table>
+            <button onclick="calculate()" class="glow-on-hover">Calculate</button>
+            <button onclick="clearFunction()" class="glow-on-hover">Clear</button>
+        </div> 
+        <script>
+            function clearFunction() {
+                document.getElementById('input1').value = '';
+                document.getElementById('input2').value = '';
+                document.getElementById('input3').value = '';
+                document.getElementById('input4').value = '';
+                document.getElementById('input5').value = '';
+                document.getElementById('input6').value = '';
+                document.getElementById('input7').value = '';
+                document.getElementById('input8').value = '';
+                document.getElementById('input9').value = '';
+                document.getElementById('input10').value = '';
+                document.getElementById('input11').value = '';
+                document.getElementById('input12').value = '';
+                document.getElementById('input13').value = '';
+                document.getElementById('input14').value = '';
+                document.getElementById('input15').value = '';
+                document.getElementById('input16').value = '';
+                document.getElementById('input17').value = '';
+                document.getElementById('input18').value = '';
+                document.getElementById('input19').value = '';
+                document.getElementById('input20').value = '';
+            }
+
+            function calculate() {
+                // Current grade = (grade * weight)/weight
+                one = document.getElementById('input1').value;
+                oneWeight = document.getElementById('input2').value / 100;
+                two = document.getElementById('input3').value;
+                twoWeight = document.getElementById('input4').value / 100;
+                three = document.getElementById('input5').value;
+                threeWeight = document.getElementById('input6').value / 100;
+                four = document.getElementById('input7').value;
+                fourWeight = document.getElementById('input8').value / 100;
+                five = document.getElementById('input9').value;
+                fiveWeight = document.getElementById('input10').value / 100;
+                six = document.getElementById('input11').value;
+                sixWeight = document.getElementById('input12').value / 100;
+                seven = document.getElementById('input13').value;
+                sevenWeight = document.getElementById('input14').value / 100;
+                eight = document.getElementById('input15').value;
+                eightWeight = document.getElementById('input16').value / 100;
+                nine = document.getElementById('input17').value;
+                nineWeight = document.getElementById('input18').value / 100;
+                ten = document.getElementById('input19').value;
+                tenWeight = document.getElementById('input20').value / 100;
+
+                one = one*oneWeight;
+                two = two*twoWeight;
+                three = three*threeWeight;
+                four = four*fourWeight;
+                five = five*fiveWeight;
+                six = six*sixWeight;
+                seven = seven*sevenWeight;
+                eight = eight*eightWeight;
+                nine = nine*nineWeight;
+                ten = ten*tenWeight;
+                
+                result = one+two+three+four+five+six+seven+eight+nine+ten;
+
+                weights = oneWeight+twoWeight+threeWeight+fourWeight+fiveWeight+sixWeight+sevenWeight+eightWeight+nineWeight+tenWeight;
+
+                result = result/weights;
+                
+                // Covers case where user clicks calculate button without any input in table
+                if (result >= 0) {
+                    result = result;
+                } else {
+                    result = 0;
+                }
+
+                weights = weights*100;
+                document.getElementById('results').innerHTML = 'Current Grade: ' + result + ' on ' + weights + '% of the mark.';
+            }
+        </script>
+    </body>
+</html>
