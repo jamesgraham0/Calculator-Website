@@ -1,0 +1,145 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:darkslateblue;
+  background-image: linear-gradient(to right, darkslateblue, rgb(85, 152, 240));
+  font-family: "Arial";
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 440px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  font-size: 16px;
+  background-color: #333333;
+  top: 200px;
+  position: relative;
+}
+
+.input {
+  width: 420px;
+  height: 50px;
+  border-radius: 0px;
+  border: 1px solid black;
+  background-color: #333333;
+  color: #d9d9d9;
+  padding: 0 5px 0 5px;
+  margin: 0 0px 10px 0px;
+  font-size: 30px;
+}
+
+.input:focus,
+.input:active {
+  border-color: #03a9f4;
+  box-shadow: 0 0 4px #03A9F4;
+  outline: none 0;
+}
+
+.button {
+  margin: 3px;
+  width: 63px;
+  border: 1px solid #0d0d0d;
+  height: 30px;
+  border-radius: 4px;
+  color: #d9d9d9;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  outline: none;
+}
+
+.mode {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.equal-sign {
+  background-color: green;
+  width: 133px;
+}
+
+.toggle-button {
+  border: none;
+  background-color: #333333;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.35);
+}
+
+p {
+  margin-top: 0;
+}
+
+button::-moz-focus-inner {
+  border-color: transparent;
+}
+
+#navbar {
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color:cornsilk;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+#navbar a[id="title"] {
+  float: left;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+#navbar a[id="title"]:hover {
+  background-color:rgb(156, 0, 96);
+  transition: 0.5s ease-out;
+}
+
+#navbar a[id="option"]:hover {
+  background-color:green;
+  transition: 0.5s ease-out;
+}
+
+.content {
+  padding: 16px;
+}
+
+.titleText
+{
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 1px 1px rgb(253, 83, 168), 2px 2px cyan;;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.t
+{
+  position: absolute;
+  top: 70px;
+}
+
